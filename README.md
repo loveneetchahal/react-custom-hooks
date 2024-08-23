@@ -40,7 +40,7 @@ Handle errors gracefully within your hooks. This ensures that your components us
 Example Use Cases of Custom Hooks
 Here are some common use cases for custom hooks that you might encounter in your React projects:
 
-1. Data Fetching
+### 1. Data Fetching
 A custom hook for fetching data from an API endpoint can be reused across different components that need to fetch and display data.
 
 `import { useState, useEffect } from 'react';
@@ -72,6 +72,7 @@ function useFetch(url) {
 	return { data, loading, error };
 }
 `
+To use in component as per below:-
 `
 const Component = () => {
 	const { data, loading, error } = useFetch('https://example.com/api/path');
@@ -87,8 +88,9 @@ const Component = () => {
 	);
 };
 `
-2. Form Handling
+### 2. Form Handling
 Custom hooks can manage form state, handle validation, and provide submit handlers, making form management a breeze.
+
 `
 import { useState } from 'react';
  
@@ -122,7 +124,7 @@ function useForm(initialValues) {
 	return { values, handleChange, handleSubmit, validate, errors };
 }
 `
-
+To use in component as per below:-
 `
 const Component = () => {
 	const { values, errors, handleChange, handleSubmit } = useForm({ username: '', password: '' }, validate);
@@ -143,7 +145,7 @@ const Component = () => {
 	);
 };
 `
-3. Authentication
+### 3. Authentication
 Managing user authentication state, including login, logout, and checking if a user is authenticated.
 `
 import { useState, useEffect } from 'react';
@@ -172,7 +174,7 @@ function useAuth() {
 	return { user, login, logout };
 }
 `
-4. Window Size
+### 4. Window Size
 A custom hook for tracking window size changes, which can be useful for responsive design.
 
 `
@@ -199,7 +201,7 @@ function useWindowSize() {
 	return size;
 }
 `
-5. Debouncing Input
+### 5. Debouncing Input
 A custom hook for debouncing input changes, which is useful for search inputs or other scenarios where you want to delay a function call.
 `
 import { useState, useEffect } from 'react';
