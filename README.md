@@ -1,6 +1,4 @@
-# react-custom-hooks
-
-** When to Use Custom Hooks in React? **
+## When to Use Custom Hooks in React? 
 Custom hooks are a great fit whenever you need to reuse stateful logic across components, especially for complex tasks like data fetching, form handling, and authentication. They simplify your component code, enhance readability, and make testing and maintenance easier.
 
 Another prime use case for custom hooks is when you find yourself writing the same code in multiple places. Instead of copying and pasting the same logic, you can extract it into a custom hook and reuse it wherever needed. This promotes the DRY (Don’t Repeat Yourself) principle, making your codebase more efficient and less error-prone.
