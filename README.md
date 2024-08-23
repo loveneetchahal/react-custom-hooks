@@ -36,6 +36,7 @@ Make sure your hooks only have single responsibility.
 Handle errors gracefully within your hooks. This ensures that your components using these hooks can handle unexpected scenarios without breaking.
 
 *** Example Use Cases of Custom Hooks *** 
+
 Here are some common use cases for custom hooks that you might encounter in your React projects:
 
 ### 1. Data Fetching
