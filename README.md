@@ -42,8 +42,8 @@ Here are some common use cases for custom hooks that you might encounter in your
 
 ### 1. Data Fetching
 A custom hook for fetching data from an API endpoint can be reused across different components that need to fetch and display data.
-
-`import { useState, useEffect } from 'react';
+```
+import { useState, useEffect } from 'react';
  
 function useFetch(url) {
 	const [data, setData] = useState(null);
@@ -71,9 +71,9 @@ function useFetch(url) {
  
 	return { data, loading, error };
 }
-`
+```
 To use in component as per below:-
-`
+```
 const Component = () => {
 	const { data, loading, error } = useFetch('https://example.com/api/path');
  
@@ -87,11 +87,10 @@ const Component = () => {
 		</div>
 	);
 };
-`
+```
 ### 2. Form Handling
 Custom hooks can manage form state, handle validation, and provide submit handlers, making form management a breeze.
-
-`
+```
 import { useState } from 'react';
  
 function useForm(initialValues) {
@@ -123,9 +122,9 @@ function useForm(initialValues) {
  
 	return { values, handleChange, handleSubmit, validate, errors };
 }
-`
-To use in component as per below:-
-`
+```
+> To use in component as per below:-
+```
 const Component = () => {
 	const { values, errors, handleChange, handleSubmit } = useForm({ username: '', password: '' }, validate);
  
@@ -144,10 +143,10 @@ const Component = () => {
 		</form>
 	);
 };
-`
+```
 ### 3. Authentication
 Managing user authentication state, including login, logout, and checking if a user is authenticated.
-`
+```
 import { useState, useEffect } from 'react';
  
 function useAuth() {
@@ -173,11 +172,10 @@ function useAuth() {
  
 	return { user, login, logout };
 }
-`
+```
 ### 4. Window Size
 A custom hook for tracking window size changes, which can be useful for responsive design.
-
-`
+```
 import { useState, useEffect } from 'react';
  
 function useWindowSize() {
@@ -200,10 +198,10 @@ function useWindowSize() {
  
 	return size;
 }
-`
+```
 ### 5. Debouncing Input
 A custom hook for debouncing input changes, which is useful for search inputs or other scenarios where you want to delay a function call.
-`
+```
 import { useState, useEffect } from 'react';
  
 function useDebounce(value, delay) {
@@ -221,4 +219,4 @@ function useDebounce(value, delay) {
  
 	return debouncedValue;
 }
-`
+```
